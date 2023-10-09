@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #7D2AE8;
+}
+
+form
+{
+    background: #fff;
+    width: 450px;
+    padding: 30px;
+    border-radius: 5px;
+}
+form header
+{
+    color: #7D2AE8;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+form .url_input
+{
+    margin: 30px 0;
+}
+.url_input .title
+{
+    font-size: 18px;
+    color: #373737;
+}
+.url_input .field
+{
+    height: 50px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+.url_input .field input
+{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #f1f1f7;
+    font-size: 15px;
+    padding: 0 15px;
+    outline: none;    
+    font-family: 'Noto sans', sans-serif;
+}
+.url_input .field .bottom_line
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #7D2AE8;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+
+}
+.url_input .field input:focus ~ .bottom_line,
+.url_input .field input:valid ~ .bottom_line
+{
+    transform: scale(1);
+}
+form .preview-area
+{
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px dashed #7D2AE8; 
+}
+.preview-area.active
+{
+    border: none;
+}
+.preview-area .thumbnail
+{
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+.preview-area.active .thumbnail
+{
+    display: block;
+}
+.preview-area .fas
+{
+    color: #7D2AE8;
+    font-size: 80px;
+}
+.preview-area span
+{
+    color: #7D2AE8;
+    margin-top: 20px;
+}
+.preview-area.active .fas,
+.preview-area.active span
+{
+    display: none;
+}
+form .download-btn
+{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    background: #7D2AE8;
+    border-radius: 5px;
+    margin: 30px 0 20px 0;
+    cursor: pointer;
+}
